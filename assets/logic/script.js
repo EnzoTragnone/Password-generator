@@ -13,6 +13,12 @@ var mix = function (confirm, mix) {
 }
 
 var passGenerate = function () {
+    //define lenght of password and user input
+    var passLenght = prompt("How long would you like the password to be? Pick a number between 1 and 128");
+    if (!passLenght || passLenght < 8 || passLenght > 128) {
+        window.alert("You must pick a number between 1 and 128!");
+        return passGenerate();
+    }
     //user input
     var upperConfirm = confirm("Would you like to add uppercase letters to your password?");
     var lowerConfirm = confirm("Would you like to add lowercase letters to your password?");
@@ -22,13 +28,7 @@ var passGenerate = function () {
     if (!(upperConfirm || lowerConfirm || numberConfirm || specialConfirm)) {
         window.alert("You must pick one of the options.");
         return passGenerate();
-    }
-    //define lenght of password and user input
-    var passLenght = prompt("How long would you like the password to be? Pick a number between 1 and 128");
-    if (!passLenght || passLenght < 8 || passLenght > 128) {
-        window.alert("You must pick a number between 1 and 128!");
-        return passGenerate();
-    }
+    };
     //mesh of arrays
     mix(upperConfirm, upperCaseArray);
     mix(lowerConfirm, lowerCaseArray);
@@ -39,6 +39,10 @@ var passGenerate = function () {
         random = prePassword[Math.floor(Math.random() * prePassword.length)];
         finalPassword = finalPassword + random;
     };
+}
+
+var reset = function () {
+    finalPassword = []
 }
 
 console.log(finalPassword);
@@ -53,6 +57,7 @@ function writePassword() {
     var passwordText = document.querySelector("#password");
 
     passwordText.value = password;
+    reset();
 
 }
 
