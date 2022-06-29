@@ -10,7 +10,7 @@ and the remote repo at https://github.com/EnzoTragnone/Password-generator
 
 made with love and effort!
 
-![alt text](http://url/to/img.png)
+![alt text]([http://url/to/img.png](https://github.com/EnzoTragnone/Password-generator/blob/main/Screen%20Shot%202022-06-29%20at%202.11.25%20PM.png))
 
 
 Enzo Tragnone
