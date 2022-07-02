@@ -10,5 +10,7 @@ and the remote repo at https://github.com/EnzoTragnone/Password-generator
 
 made with love and effort!
 
+![Alt text](/SCREENSHOT.png "title")
+
 
 Enzo Tragnone
